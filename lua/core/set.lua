@@ -33,7 +33,7 @@ vim.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
 --- Fast update time
-vim.opt.updatetime = 50
+vim.opt.updatetime = 250
 
 --- Color column
 vim.opt.colorcolumn = "80"

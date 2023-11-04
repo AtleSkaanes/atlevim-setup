@@ -64,3 +64,9 @@ vim.keymap.set("n", "<leader>ft", "<cmd>NvimTreeFindFileToggle<CR>")
 
 --- Symbol Outline
 vim.keymap.set("n", "<leader>so", "<cmd>SymbolsOutline<CR>")
+
+--- Fugitive
+vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
+
+--- Undotree
+vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)

@@ -1,2 +1,1 @@
-require('atlevim')
-
+require('core')
