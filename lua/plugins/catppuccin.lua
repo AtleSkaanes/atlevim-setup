@@ -1,7 +1,6 @@
 return {
     'catppuccin/nvim',
     main = 'catppuccin',
-    lazy = false,
     priority = 1000,
     opts = {
         flavour = "mocha", -- latte, frappe, macchiato, mocha
@@ -24,8 +23,8 @@ return {
             comments = { "italic" }, -- Change the style of comments
             conditionals = { "italic" },
             loops = {},
-            functions = { "bold" },
-            keywords = {},
+            functions = {},
+            keywords = { "italic" },
             strings = {},
             variables = {},
             numbers = {},

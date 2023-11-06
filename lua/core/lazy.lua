@@ -13,10 +13,8 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup('plugins', {
     dev = {
-        -- directory where you store your local plugin projects
         path = vim.fn.stdpath("data").."/local_projects",
-        ---@type string[] plugins that match these patterns will use your local versions instead of being fetched from GitHub
-        patterns = { "AtleSkaanes" }, -- For example {"folke"}
-        fallback = false, -- Fallback to git when local plugin doesn't exist
+        patterns = { "AtleSkaanes" },
+        fallback = true,
       },
 })
