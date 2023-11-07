@@ -5,7 +5,7 @@ return {
     event = { 'BufReadPre', 'BufNewFile' },
     dependencies = { 'nvim-lua/plenary.nvim' },
     opts = {
-        tabline = false
+        tabline = true
     },
     init = function()
         require("telescope").load_extension('harpoon')

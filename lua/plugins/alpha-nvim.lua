@@ -25,6 +25,9 @@ return {
             dashboard.button( "c", "  Configure" , "<cmd>cd C:\\Users\\atles\\AppData\\Local\\nvim<CR><cmd>NvimTreeFindFileToggle<CR><C-w>l<cmd>q<CR>"),
             dashboard.button( "q", "󰅚  Quit NVIM" , ":qa<CR>"),
         }
+        dashboard.section.footer.val = {
+            [["10/10 - Wasted so much time here" - Atle]],
+        }
         return dashboard.config
     end,
     dependencies = { 'nvim-tree/nvim-web-devicons' }
