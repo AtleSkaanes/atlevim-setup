@@ -6,7 +6,6 @@ return {
     dependencies = {
         'nvim-lua/plenary.nvim',
         'AtleSkaanes/telescope-plugins',
-        'nvim-telescope/telescope-ui-select.nvim',
     },
     config = function()
         require("telescope").setup {
@@ -38,7 +37,6 @@ return {
         vim.keymap.set("n", "<leader>gc", builtin.git_commits, {})
         vim.keymap.set("n", "<leader>gs", builtin.git_status, {})
 
-        require("telescope").load_extension("ui-select")
         require('telescope').load_extension('telescopeplugins')
     end,
 }

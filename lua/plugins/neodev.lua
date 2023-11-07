@@ -8,7 +8,7 @@ return {
             enabled = true,
             runtime = true,
             types = true,
-            plugins = true
+            plugins = { "nvim-dap-ui" }
         },
         override = function(root_dir, options) end,
         lspconfig = true,
