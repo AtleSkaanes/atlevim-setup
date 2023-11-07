@@ -38,6 +38,9 @@ vim.opt.updatetime = 250
 --- Color column
 vim.opt.colorcolumn = "80"
 
+--- Background
+--vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+--vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 
 --- Terminal to powershell
 local powershell_options = {
