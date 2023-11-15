@@ -2,8 +2,8 @@ return {
     'stevearc/dressing.nvim',
     main = 'dressing',
     lazy = true,
-    event = { 'BufReadPre', 'BufNewFile' },
+    event = { 'VeryLazy' },
     opts = {
         backend = { 'telescope' },
-    }
+    },
 }

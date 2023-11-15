@@ -4,17 +4,31 @@ return {
     lazy = true,
     event = { 'BufReadPre', 'BufNewFile' },
     opts = {
+        icons = {
+            cmd = '',
+            category = '',
+            back = ' ..',
+        },
         commands = {
             {
-                name = 'print test',
-                category = 'print',
-                cmd = 'test'
+                name = 'test',
+                category = 'echo',
+                cmd = { 'echo', 'test' },
             },
             {
-                name = 'print yes',
-                category = 'print',
-                cmd = 'yes'
+                name = 'yes',
+                category = 'echo',
+                cmd = { 'echo', 'yes' },
             },
-        }
-    }
+            {
+                category = { 'verson control', 'git' },
+                name = 'status',
+                cmd = { 'git', 'status', '--porcelain' },
+            },
+            {
+                name = 'py version',
+                cmd = { 'python', '--version' },
+            },
+        },
+    },
 }
