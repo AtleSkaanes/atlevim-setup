@@ -11,13 +11,13 @@ My neovim setup
 
 ### UI
 #### Theme
-- [catppuccin/nvim](https://github.com/catppuccin/nvim) ([file](lua/plugins/catppuccin))
+- [catppuccin/nvim](https://github.com/catppuccin/nvim) ([file](lua/plugins/catppuccin.lua))
 #### Startscreen
 - [goolord/alpha-nvim](https://github.com/goolord/alpha-nvim) ([file](lua/plugins/alpha-nvim.lua))
 #### Info
 - [utilyre/barbecue.nvim](https://github.com/utilyre/barbecue.nvim) ([file](lua/plugins/barbecue.lua))
 - [stevearc/dressing.nvim](https://github.com/stevearc/dressing.nvim) ([file](lua/plugins/dressing.lua))
-- [j-hui/fidget.nvim](https://github.com/j-hui/fidget.nvim) ([file](lua/plugins/j-hui/fidget.nvim))
+- [j-hui/fidget.nvim](https://github.com/j-hui/fidget.nvim) ([file](lua/plugins/fidget.lua))
 - [nvim-lualine/lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) ([file](lua/plugins/lualine.lua))
 - [folke/neodev.nvim](https://github.com/folke/neodev.nvim) ([file](lua/plugins/neodev.lua))
 #### Trees
@@ -25,7 +25,7 @@ My neovim setup
 - [simrat39/symbols-outline.nvim](https://github.com/simrat39/symbols-outline.nvim) ([file](lua/plugins/symbols-outline.lua))
 - [mbbill/undotree](https://github.com/mbbill/undotree) ([file](lua/plugins/undotree.lua))
 #### Misc
-- [RRethy/vim-illuminate](https://github.com/RRethy/vim-illuminate) ([file](lua/plugins/RRethy/vim-illuminate))
+- [RRethy/vim-illuminate](https://github.com/RRethy/vim-illuminate) ([file](lua/plugins/vim-illuminate.lua))
 - [nvim-tree/nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons) ([file](lua/plugins/nvim-web-devicons.lua))
 
 
@@ -47,11 +47,11 @@ My neovim setup
 #### Debugging
 - [rcarriga/nvim-dap-ui](https://github.com/rcarriga/nvim-dap-ui) ([file](lua/plugins/dap.lua))
 #### Git
-- [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive) ([file](lua/plugins/tpope/vim-fugitive))
+- [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive) ([file](lua/plugins/vim-fugitive.lua))
 #### Misc
 - [samodostal/image.nvim](https://github.com/samodostal/image.nvim) ([file](lua/plugins/image.lua))
 - [ecthelionvi/NeoComposer.nvim](https://github.com/ecthelionvi/NeoComposer.nvim) ([file](lua/plugins/neo-composer.lua))
-- [toppair/peek.nvim](https://github.com/toppair/peek.nvim) ([file](lua/plugins/peek.luatoppair/peek.nvim))
+- [toppair/peek.nvim](https://github.com/toppair/peek.nvim) ([file](lua/plugins/peek.lua))
 - [nvim-lua/plenary.nvim](https://github.com/nvim-lua/plenary.nvim) ([file](lua/plugins/plenary.lua))
 - [atleskaanes/presence.nvim](https://github.com/atleskaanes/presence.nvim) ([file](lua/plugins/presence.lua))
 - [aserowy/tmux.nvim](https://github.com/aserowy/tmux.nvim) ([file](lua/plugins/tmux.lua))
