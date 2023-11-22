@@ -51,6 +51,7 @@ My neovim setup
 #### Misc
 - [samodostal/image.nvim](https://github.com/samodostal/image.nvim) ([file](lua/plugins/image.lua))
 - [ecthelionvi/NeoComposer.nvim](https://github.com/ecthelionvi/NeoComposer.nvim) ([file](lua/plugins/neo-composer.lua))
+- [toppair/peek.nvim](https://github.com/toppair/peek.nvim) ([file](lua/plugins/peek.luatoppair/peek.nvim))
 - [nvim-lua/plenary.nvim](https://github.com/nvim-lua/plenary.nvim) ([file](lua/plugins/plenary.lua))
 - [atleskaanes/presence.nvim](https://github.com/atleskaanes/presence.nvim) ([file](lua/plugins/presence.lua))
 - [aserowy/tmux.nvim](https://github.com/aserowy/tmux.nvim) ([file](lua/plugins/tmux.lua))
