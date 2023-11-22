@@ -1,9 +1,9 @@
 return {
-    'AtleSkaanes/presence.nvim',
+    'atleskaanes/presence.nvim',
     main = 'presence',
     lazy = true,
     event = { 'BufReadPre', 'BufNewFile' },
     opts = {
         show_time = false,
-    }
+    },
 }
