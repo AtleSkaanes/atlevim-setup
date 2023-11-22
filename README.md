@@ -9,11 +9,11 @@ My neovim setup
 
 ### UI
 #### Theme
-- [catppuccin/nvim](github.com/catppuccin/nvim)
+- [catppuccin/nvim](https://github.com/catppuccin/nvim)
 #### Startscreen
-- [goolord/alpha-nvim](github.com/goolord/alpha-nvim)
+- [goolord/alpha-nvim](https://github.com/goolord/alpha-nvim)
 #### status lines
-- [utilyre/barbecue.nvim](github.com/utilyre/barbecue.nvim)
+- [utilyre/barbecue.nvim](https://github.com/utilyre/barbecue.nvim)
 
 ### Formatting
-- [m4xshen/autoclose.nvim](github.com/m4xshen/autoclose.nvim)
+- [m4xshen/autoclose.nvim](https://github.com/m4xshen/autoclose.nvim)
