@@ -6,7 +6,21 @@ return {
     build = ':TSUpdate',
     opts = {
         -- A list of parser names, or "all" (the five listed parsers should always be installed)
-        ensure_installed = { "c", "cpp", "rust", "python", "c_sharp", "lua", "vim", "vimdoc", "query" },
+        ensure_installed = {
+            'c',
+            'cpp',
+            'rust',
+            'python',
+            'c_sharp',
+            'lua',
+            'vim',
+            'vimdoc',
+            'query',
+            'markdown',
+            'markdown_inline',
+            'bibtex',
+            'latex',
+        },
         -- Install parsers synchronously (only applied to `ensure_installed`)
         sync_install = false,
         -- Automatically install missing parsers when entering buffer
@@ -22,5 +36,5 @@ return {
             -- Instead of true it can also be a list of languages
             additional_vim_regex_highlighting = false,
         },
-    }
+    },
 }

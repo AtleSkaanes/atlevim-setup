@@ -95,11 +95,16 @@ return {
         local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
         require('mason').setup({
-            ensure_installed = { 'clang-format' },
+            ensure_installed = { 'clang-format', 'marksman', 'markdownlint' },
         })
 
         require('mason-lspconfig').setup({
-            ensure_installed = { 'clangd', 'rust_analyzer', 'lua_ls' },
+            ensure_installed = {
+                'clangd',
+                'rust_analyzer',
+                'lua_ls',
+                'marksman',
+            },
             handlers = {
                 lsp_zero.default_setup,
                 lua_ls = function()

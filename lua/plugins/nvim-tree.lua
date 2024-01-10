@@ -2,7 +2,7 @@ return {
     'nvim-tree/nvim-tree.lua',
     main = 'nvim-tree',
     opts = {
-        sort_by = "case_sensitive",
+        sort_by = 'case_sensitive',
         view = {
             width = 30,
         },
@@ -10,7 +10,8 @@ return {
             group_empty = true,
         },
         filters = {
-            dotfiles = true, custom = { '^.git$' }
+            dotfiles = true,
+            custom = { '^.git$' },
         },
 
         --- Project manager
@@ -18,7 +19,7 @@ return {
         respect_buf_cwd = true,
         update_focused_file = {
             enable = false,
-            update_root = false
+            update_root = false,
         },
     },
     init = function()
@@ -28,6 +29,5 @@ return {
         -- set termguicolors to enable highlight groups
         vim.opt.termguicolors = true
     end,
-    dependencies = { 'nvim-tree/nvim-web-devicons' }
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
 }
-
