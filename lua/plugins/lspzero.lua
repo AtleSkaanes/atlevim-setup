@@ -97,13 +97,12 @@ return {
         require('mason').setup({
             ensure_installed = { 'clang-format', 'marksman', 'markdownlint' },
         })
-
         require('mason-lspconfig').setup({
             ensure_installed = {
                 'clangd',
                 'rust_analyzer',
                 'lua_ls',
-                'marksman',
+                'slint_lsp',
             },
             handlers = {
                 lsp_zero.default_setup,
@@ -146,6 +145,13 @@ return {
                         end,
                         capabilities = capabilities,
                     })
+                end,
+                slint_lsp = function()
+                    local opts = {
+                        command = 'slint-lsp',
+                        filetypes = 'slint',
+                    }
+                    lspconfig.slint_lsp.setup(opts)
                 end,
             },
         })

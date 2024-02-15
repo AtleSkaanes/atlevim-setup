@@ -17,5 +17,5 @@ return {
             callback = function() require('barbecue.ui').update() end,
         })
     end,
-    dependencies = { 'SmiteshP/nvim-navic', 'nvim-tree/nvim-web-devicons' }
+    dependencies = { 'SmiteshP/nvim-navic', 'nvim-tree/nvim-web-devicons' },
 }

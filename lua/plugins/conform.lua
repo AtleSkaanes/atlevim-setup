@@ -12,6 +12,7 @@ return {
             typescript = { 'prettier' },
             json = { 'prettier' },
             markdown = { 'prettier' },
+            slint = { 'slint-lsp' },
         },
         format_on_save = {
             lsp_fallback = true,

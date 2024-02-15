@@ -4,28 +4,32 @@ return {
     opts = {
         override = {
             zsh = {
-                icon = "",
-                color = "#428850",
-                cterm_color = "65",
-                name = "Zsh"
-            }
+                icon = '',
+                color = '#428850',
+                cterm_color = '65',
+                name = 'Zsh',
+            },
         },
         color_icons = true,
         default = true,
         strict = false,
         override_by_filename = {
-            [".gitignore"] = {
-                icon = "",
-                color = "#f1502f",
-            }
+            ['.gitignore'] = {
+                icon = '',
+                color = '#f1502f',
+            },
         },
         override_by_extension = {
-            ["log"] = {
-                icon = "",
-                color = "#81e043",
-                name = "Log"
-            }
-        }
+            ['log'] = {
+                icon = '',
+                color = '#81e043',
+                name = 'Log',
+            },
+            ['slint'] = {
+                icon = '󱐌',
+                color = '#99a8ff',
+                name = 'SLint',
+            },
+        },
     },
 }
-
