@@ -78,7 +78,9 @@ vim.keymap.set('n', '<leader>so', '<cmd>SymbolsOutline<CR>')
 --- Undotree
 vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle)
 
-vim.keymap.set('n', '<C-w>', '<cmd>tabonly <CR>')
+vim.keymap.set('n', '<C-w>', '<cmd>only<CR><cmd>NvimTreeFindFile<CR>')
+vim.keymap.set('n', '<C-s>', '<cmd>vsplit<CR>')
+vim.keymap.set('n', '<C-h>', '<cmd>split<CR>')
 
 --- Diagnostics
 vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float)
