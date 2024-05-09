@@ -1,6 +1,7 @@
 return {
     'nvim-tree/nvim-tree.lua',
     main = 'nvim-tree',
+    lazy = false,
     opts = {
         sort_by = 'case_sensitive',
         view = {

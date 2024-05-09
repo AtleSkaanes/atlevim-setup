@@ -1,6 +1,7 @@
 return {
     'numToStr/Comment.nvim',
     main = 'Comment',
+    lazy = true,
     event = { 'BufReadPre', 'BufNewFile' },
     opts = {
         padding = true,
@@ -13,5 +14,5 @@ return {
             line = 'gc',
             block = 'gb',
         },
-    }
+    },
 }

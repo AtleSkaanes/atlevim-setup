@@ -2,7 +2,7 @@ return {
     'utilyre/barbecue.nvim',
     main = 'barbecue',
     lazy = true,
-    events = { 'BufWinEnter' },
+    events = { 'VeryLazy' },
     opts = {
         create_autocmd = false,
     },

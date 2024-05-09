@@ -1,7 +1,5 @@
 vim.g.mapleader = ' '
 
-vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
-
 --- Move highlighted block
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
@@ -22,9 +20,6 @@ vim.keymap.set('n', '<leader>y', '"+y')
 vim.keymap.set('v', '<leader>y', '"+y')
 vim.keymap.set('n', '<leader>Y', '"+Y')
 
---- Change project
-vim.keymap.set('n', '<C-P>', '<cmd>silent !tmux neww tmux-sessionizer<CR>')
-
 --- Quickfix navigation
 vim.keymap.set('n', '<C-k>', '<cmd>cnext<CR>zz')
 vim.keymap.set('n', '<C-j>', '<cmd>cprev<CR>zz')
@@ -37,9 +32,6 @@ vim.keymap.set(
     '<leader>s',
     [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]]
 )
-
---- Turn file executeable
-vim.keymap.set('n', '<leader>x', '<cmd>!chmod +x %<CR>', { silent = true })
 
 --- Git merge
 vim.keymap.set('n', 'gl', '<cmd>diffget //2<CR>')
@@ -65,6 +57,12 @@ vim.keymap.set('t', '<A-up>', '<C-\\><C-n><C-w>k')
 vim.keymap.set('t', '<A-down>', '<C-\\><C-n><C-w>j')
 vim.keymap.set('t', '<A-left>', '<C-\\><C-n><C-w>h')
 vim.keymap.set('t', '<A-right>', '<C-\\><C-n><C-w>l')
+--- Resize splits
+local resizeSize = 1
+vim.keymap.set('n', '<A-h>', '<cmd>vertical resize +' .. resizeSize .. '<CR>')
+vim.keymap.set('n', '<A-l>', '<cmd>vertical resize -' .. resizeSize .. '<CR>')
+vim.keymap.set('n', '<A-j>', '<cmd>horizontal resize +' .. resizeSize .. '<CR>')
+vim.keymap.set('n', '<A-k>', '<cmd>horizontal resize -' .. resizeSize .. '<CR>')
 
 --- nvim-tree
 vim.keymap.set('n', '<leader>ft', '<cmd>NvimTreeFindFileToggle<CR>')
@@ -84,6 +82,8 @@ vim.keymap.set('n', '<C-h>', '<cmd>split<CR>')
 
 --- Diagnostics
 vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float)
+vim.keymap.set('n', '.d', vim.diagnostic.goto_next)
+vim.keymap.set('n', ',d', vim.diagnostic.goto_prev)
 
 --- Unbind keybindings
 vim.keymap.set('n', '.', '<cmd><CR>')

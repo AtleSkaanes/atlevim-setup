@@ -1,6 +1,8 @@
 return {
     -- Autocompletion
     'hrsh7th/nvim-cmp',
+    lazy = true,
+    events = { 'VeryLazy' },
     dependencies = {
         'hrsh7th/cmp-buffer',
         'hrsh7th/cmp-path',
