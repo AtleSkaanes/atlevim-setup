@@ -22,6 +22,9 @@ return {
             enable = false,
             update_root = false,
         },
+        diagnostics = {
+            enable = true,
+        },
         on_attach = function(bufnr)
             local api = require('nvim-tree.api')
 

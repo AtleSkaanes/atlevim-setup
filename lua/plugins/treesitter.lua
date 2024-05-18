@@ -11,7 +11,6 @@ return {
             'cpp',
             'rust',
             'python',
-            'c_sharp',
             'lua',
             'vim',
             'vimdoc',
