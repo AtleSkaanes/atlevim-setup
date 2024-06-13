@@ -9,6 +9,20 @@ return {
         },
         renderer = {
             group_empty = true,
+            icons = {
+                diagnostics_placement = 'after',
+                glyphs = {
+                    git = {
+                        unstaged = '✗',
+                        staged = '✓',
+                        unmerged = '',
+                        renamed = '➜',
+                        untracked = '★',
+                        deleted = '',
+                        ignored = '◌',
+                    },
+                },
+            },
         },
         filters = {
             dotfiles = true,
@@ -19,11 +33,16 @@ return {
         sync_root_with_cwd = false,
         respect_buf_cwd = true,
         update_focused_file = {
-            enable = false,
+            enable = true,
             update_root = false,
         },
         diagnostics = {
             enable = true,
+            show_on_dirs = true,
+        },
+        modified = {
+            enable = true,
+            show_on_dirs = false,
         },
         on_attach = function(bufnr)
             local api = require('nvim-tree.api')

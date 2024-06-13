@@ -12,6 +12,7 @@ return {
         '<leader>dl',
         '<leader>dh',
     },
+    dependencies = { 'mfussenegger/nvim-dap', 'nvim-neotest/nvim-nio' },
     config = function()
         local dapui = require('dapui')
         local dap = require('dap')
@@ -44,6 +45,37 @@ return {
             '<Leader>dh',
             function() require('dap.ui.widgets').hover() end
         )
+
+        vim.fn.sign_define('DapBreakpoint', {
+            text = '',
+            linehl = 'DapBreakpointLine',
+            texthl = 'DapBreakpoint',
+            numhl = 'DapBreakpoint',
+        })
+        vim.fn.sign_define('DapBreakpointCondition', {
+            text = '',
+            linehl = 'DapBreakpointLine',
+            texthl = 'DapBreakpoint',
+            numhl = 'DapBreakpoint',
+        })
+        vim.fn.sign_define('DapBreakpointRejected', {
+            text = '',
+            linehl = 'DapBreakpointLine',
+            texthl = 'DapBreakpoint',
+            numhl = 'DapBreakpoint',
+        })
+        vim.fn.sign_define('DapLogPoint', {
+            text = '',
+            linehl = 'DapLogPointLine',
+            texthl = 'DapLogPoint',
+            numhl = 'DapLogPoint',
+        })
+        vim.fn.sign_define('DapStopped', {
+            text = '',
+            linehl = 'DapStoppedLine',
+            texthl = 'DapStopped',
+            numhl = 'DapStopped',
+        })
 
         -- Open Dapui automaticly
         dap.listeners.before.event_initialized['dapui_configs'] = function()
@@ -106,5 +138,4 @@ return {
         -- If you want to use this for C, add something like this:
         dap.configurations.c = dap.configurations.cpp
     end,
-    dependencies = { 'mfussenegger/nvim-dap' },
 }

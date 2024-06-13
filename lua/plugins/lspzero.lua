@@ -7,9 +7,8 @@ return {
     dependencies = {
         'williamboman/mason.nvim',
         'williamboman/mason-lspconfig.nvim',
-
-        -- Language Support
-        'simrat39/rust-tools.nvim',
+        -- Rust
+        'mrcjkb/rustaceanvim',
         -- LSP Support
         'neovim/nvim-lspconfig',
         -- Autocompletion
@@ -38,6 +37,12 @@ return {
                 opts
             )
             vim.keymap.set('n', 'K', function() vim.lsp.buf.hover() end, opts)
+            vim.keymap.set(
+                'n',
+                '<leader>k',
+                function() vim.lsp.buf.hover() end,
+                opts
+            )
             vim.keymap.set(
                 'n',
                 '<leader>vws',
@@ -74,55 +79,51 @@ return {
                 function() vim.lsp.buf.signature_help() end,
                 opts
             )
+
+            --- Inlay type hints
+            vim.lsp.inlay_hint.enable()
+            vim.keymap.set(
+                'n',
+                '<leader>ih',
+                function()
+                    vim.lsp.inlay_hint.enable(
+                        not vim.lsp.inlay_hint.is_enabled()
+                    )
+                end,
+                opts
+            )
         end)
-        lsp_zero.set_preferences({
-            sign_icons = {},
+        lsp_zero.set_sign_icons({
+            error = '',
+            warn = '',
+            hint = '',
+            info = '',
         })
 
         local lspconfig = require('lspconfig')
         local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
         require('mason').setup({
-            ensure_installed = { 'clang-format', 'marksman', 'markdownlint' },
+            ensure_installed = { 'clang-format', 'markdownlint' },
         })
         require('mason-lspconfig').setup({
             ensure_installed = {
                 'clangd',
-                'rust_analyzer',
                 'lua_ls',
                 'slint_lsp',
+                -- 'rust_analyzer',
+                'pylsp',
+                'marksman',
             },
             handlers = {
                 lsp_zero.default_setup,
                 lua_ls = function()
                     local lua_opts = lsp_zero.nvim_lua_ls()
-                    lspconfig.lua_ls.setup(lua_opts)
+                    lspconfig.lua_ls.setup({ lua_opts })
                 end,
 
-                rust_analyzer = function()
-                    local rust_tools = require('rust-tools')
+                -- marksman = function() lspconfig.marksman.setup() end,
 
-                    rust_tools.setup({
-                        server = {
-                            on_attach = function(client, bufnr)
-                                require('navic').attach(client, bufnr)
-                                vim.keymap.set(
-                                    'n',
-                                    '<C-space>',
-                                    rust_tools.hover_actions.hover_actions,
-                                    { buffer = bufnr }
-                                )
-                                -- Code action groups
-                                vim.keymap.set(
-                                    'n',
-                                    '<Leader>a',
-                                    rust_tools.code_action_group.code_action_group,
-                                    { buffer = bufnr }
-                                )
-                            end,
-                        },
-                    })
-                end,
                 clangd = function()
                     lspconfig.clangd.setup({
                         on_attach = function(client, bufnr)
@@ -134,42 +135,14 @@ return {
                         capabilities = capabilities,
                     })
                 end,
+                -- rust_analyzer = function() end,
                 slint_lsp = function()
                     local opts = {
                         command = 'slint-lsp',
-                        filetypes = 'slint',
+                        filetypes = { 'slint' },
                     }
                     lspconfig.slint_lsp.setup(opts)
                 end,
-            },
-        })
-
-        local rt = require('rust-tools')
-
-        rt.setup({
-            dap = {
-                adapter = require('dap').adapters.codelldb,
-            },
-            server = {
-                on_attach = function(_, bufnr)
-                    vim.keymap.set(
-                        'n',
-                        '<leader>k',
-                        rt.hover_actions.hover_actions,
-                        { buffer = bufnr }
-                    )
-                    vim.keymap.set(
-                        'n',
-                        '<Leader>a',
-                        rt.code_action_group.code_action_group,
-                        { buffer = bufnr }
-                    )
-                end,
-            },
-            tools = {
-                hover_actions = {
-                    auto_focus = true,
-                },
             },
         })
     end,

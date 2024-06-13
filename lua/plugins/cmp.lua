@@ -8,6 +8,7 @@ return {
         'hrsh7th/cmp-path',
         'hrsh7th/cmp-cmdline',
         'hrsh7th/cmp-nvim-lsp',
+        'hrsh7th/cmp-calc',
         -- LuaSnip
         'L3MON4D3/LuaSnip',
         'saadparwaiz1/cmp_luasnip',
@@ -20,6 +21,7 @@ return {
         cmp.setup({
             sources = {
                 { name = 'path' },
+                { name = 'calc' },
                 { name = 'nvim_lsp' },
                 { name = 'nvim_lua' },
             },

@@ -20,7 +20,7 @@ return {
         map('n', '<A-w>', '<cmd>BufferCloseAllButCurrent<CR>', opts)
     end,
     opts = {
-        exclude_name = { 'Alpha' },
+        exclude_name = { 'Alpha', 'pwsh.EXE' },
         sidebar_filetypes = {
             NvimTree = true,
         },

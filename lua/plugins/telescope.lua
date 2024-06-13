@@ -9,6 +9,12 @@ return {
     },
     config = function()
         require('telescope').setup({
+            pickers = {
+                colorscheme = {
+                    enable_preview = true,
+                    theme = 'dropdown',
+                },
+            },
             extensions = {
                 ['ui-select'] = {
                     require('telescope.themes').get_dropdown({
@@ -28,8 +34,10 @@ return {
         vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 
         -- LSP
-        vim.keymap.set('n', 'gi', builtin.lsp_implementations, {})
-        vim.keymap.set('n', '<leader>vf', builtin.lsp_workspace_symbols, {})
+        vim.keymap.set('n', '<leader>li', builtin.lsp_implementations, {})
+        vim.keymap.set('n', '<leader>lr', builtin.lsp_references, {})
+        vim.keymap.set('n', '<leader>vs', builtin.lsp_workspace_symbols, {})
+        vim.keymap.set('n', '<leader>ds', builtin.lsp_document_symbols, {})
 
         -- GIT
         vim.keymap.set('n', '<C-p>', builtin.git_files, {})
