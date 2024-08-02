@@ -28,17 +28,12 @@ return {
             '<Leader>db',
             function() dap.toggle_breakpoint() end
         )
-        vim.keymap.set(
-            'n',
-            '<Leader>lp',
-            function()
-                dap.set_breakpoint(
-                    nil,
-                    nil,
-                    vim.fn.input('Log point message: ')
-                )
-            end
-        )
+        vim.keymap.set('n', '<Leader>lp', function()
+            vim.ui.input(
+                { prompt = 'Log point message: ' },
+                function(input) dap.set_breakpoint(nil, nil, input) end
+            )
+        end)
         vim.keymap.set('n', '<Leader>dl', function() dap.run_last() end)
         vim.keymap.set(
             { 'n', 'v' },

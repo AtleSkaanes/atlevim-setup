@@ -47,4 +47,28 @@ return {
         priority = 1000,
         opts = {},
     },
+    {
+        'ellisonleao/gruvbox.nvim',
+        lazy = false,
+        priority = 1000,
+        opts = {},
+    },
+    {
+        'ab-dx/ares.nvim',
+        name = 'ares',
+        lazy = false,
+        priority = 1000,
+        dependencies = { 'rktjmp/lush.nvim' },
+    },
+    {
+        'Mofiqul/vscode.nvim',
+        lazy = false,
+        priority = 1000,
+    },
+    {
+        'zenbones-theme/zenbones.nvim',
+        lazy = false,
+        priority = 1000,
+        dependencies = { 'rktjmp/lush.nvim' },
+    },
 }

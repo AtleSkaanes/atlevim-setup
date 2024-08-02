@@ -40,7 +40,7 @@ return {
         vim.keymap.set('n', '<leader>ds', builtin.lsp_document_symbols, {})
 
         -- GIT
-        vim.keymap.set('n', '<C-p>', builtin.git_files, {})
+        vim.keymap.set('n', '<leader>gf', builtin.git_files, {})
         vim.keymap.set('n', '<leader>gb', builtin.git_branches, {})
         vim.keymap.set('n', '<leader>gc', builtin.git_commits, {})
         vim.keymap.set('n', '<leader>gs', builtin.git_status, {})

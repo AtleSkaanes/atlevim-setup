@@ -30,7 +30,12 @@ return {
             ['slint'] = {
                 icon = '󱐌',
                 color = '#99a8ff',
-                name = 'SLint',
+                name = 'Slint',
+            },
+            ['gleam'] = {
+                icon = '',
+                color = '#cba6f7',
+                name = 'Gleam',
             },
         },
     },

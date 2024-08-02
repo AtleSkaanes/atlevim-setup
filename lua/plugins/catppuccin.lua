@@ -61,6 +61,7 @@ return {
                     DapLogPointLine = { sp = cp.blue, underline = true },
                     DapStoppedLine = { sp = cp.green, underline = true },
                     DapStopped = { fg = cp.green },
+                    DiffAdd = { fg = cp.green },
                 }
             end,
         },

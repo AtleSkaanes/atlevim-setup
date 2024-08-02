@@ -60,3 +60,7 @@ end
 
 --- Hyperlinks
 vim.cmd('set conceallevel=2')
+
+--- New commands
+vim.cmd.command('Wa', 'wa')
+vim.cmd.command('WA', 'wa')

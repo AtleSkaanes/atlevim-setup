@@ -9,6 +9,9 @@ return {
         },
         renderer = {
             group_empty = true,
+            root_folder_label = function(path)
+                return vim.fn.fnamemodify(path, ':~:.')
+            end,
             icons = {
                 diagnostics_placement = 'after',
                 glyphs = {

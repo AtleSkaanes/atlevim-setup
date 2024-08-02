@@ -11,15 +11,17 @@ return {
         'mrcjkb/rustaceanvim',
         -- LSP Support
         'neovim/nvim-lspconfig',
+        -- Linting
+        'mfussenegger/nvim-lint',
         -- Autocompletion
         'hrsh7th/nvim-cmp',
         'hrsh7th/cmp-buffer',
         'hrsh7th/cmp-path',
         'hrsh7th/cmp-cmdline',
         'hrsh7th/cmp-nvim-lsp',
-        'L3MON4D3/LuaSnip',
+        -- 'L3MON4D3/LuaSnip',
         -- LuaSnip
-        'L3MON4D3/cmp_luasnip',
+        -- 'L3MON4D3/cmp_luasnip',
 
         -- neodev
         'folke/neodev.nvim',
@@ -114,6 +116,7 @@ return {
                 -- 'rust_analyzer',
                 'pylsp',
                 'marksman',
+                'elixirls',
             },
             handlers = {
                 lsp_zero.default_setup,
@@ -129,8 +132,8 @@ return {
                         on_attach = function(client, bufnr)
                             client.server_capabilities.signatureHelpProvoder =
                                 false
-                            require('navic').attach(client, bufnr)
-                            require('nvim-navbuddy').attach(client, bufnr)
+                            -- require('navic').attach(client, bufnr)
+                            -- require('nvim-navbuddy').attach(client, bufnr)
                         end,
                         capabilities = capabilities,
                     })
@@ -143,7 +146,24 @@ return {
                     }
                     lspconfig.slint_lsp.setup(opts)
                 end,
+                elixirls = function()
+                    lspconfig.elixirls.setup({
+                        cmd = {
+                            'C:/Users/atles/AppData/Local/nvim-data/elixirls/language_server.bat',
+                        },
+                    })
+                end,
             },
         })
+
+        require('lint').linters_by_ft = {
+            markdown = 'markdownlint',
+            rust = 'snyk',
+            go = 'snyk',
+            typescript = 'snyk',
+            c = 'ast-grep',
+            cpp = 'ast-grep',
+            lua = 'selene',
+        }
     end,
 }

@@ -73,7 +73,6 @@ My neovim setup
 - [toppair/peek.nvim](https://github.com/toppair/peek.nvim) ([file](lua/plugins/peek.lua))
 - [nvim-lua/plenary.nvim](https://github.com/nvim-lua/plenary.nvim) ([file](lua/plugins/plenary.lua))
 - [atleskaanes/presence.nvim](https://github.com/atleskaanes/presence.nvim) ([file](lua/plugins/presence.lua))
-- [aserowy/tmux.nvim](https://github.com/aserowy/tmux.nvim) ([file](lua/plugins/tmux.lua))
 - [akinsho/toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim) ([file](lua/plugins/toggleterm.lua))
 - [jbyuki/quickmath.nvim](https://github.com/jbyuki/quickmath.nvim) ([file](lua/plugins/quickmath.lua))
 - [CopilotC-Nvim/CopilotChat.nvim](https://github.com/CopilotC-Nvim/CopilotChat.nvim) ([file](lua/plugins/copilot.lua))
